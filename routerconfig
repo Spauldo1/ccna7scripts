@@ -1,0 +1,26 @@
+enable 
+config t
+hostname R1
+banner motd "Stay out."
+enable secret class
+service password-encryption 
+no ip domain-lookup
+line con 0
+password cisco
+login 
+exit
+line vty 0 4 
+password cisco
+login 
+exit 
+
+
+///script for adding ip address to an interface 
+ipv6 unicast-routing
+int g0/0
+ip add 172.30.48.1 255.255.254.0
+ipv6 add 2001:db8:face:20ee::1/64
+ipv6 add fe80::12 link-local
+description Link from R1 to S1
+no shut 
+exit

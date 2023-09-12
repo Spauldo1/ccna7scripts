@@ -16,10 +16,14 @@ name native
 int f0/10
 switchport mode access 
 switchport access vlan 5
+no shut
+exit
 
 ///Making  a trunking vlan 
-int range f0/1
+int f0/1
 switchport mode trunk 
 switchport trunk allowed vlan 5,10,15,20,99
 switchport trunk native vlan 99
 nonegotiate
+no shut 
+exit

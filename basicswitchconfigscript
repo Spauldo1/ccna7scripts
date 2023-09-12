@@ -1,0 +1,15 @@
+enable 
+config t
+hostname S1
+banner motd "Stay out."
+enable secret class 
+service password-encryption
+no ip domain-lookup
+line con 0
+password cisco
+login 
+exit
+line vty 0 15 
+password cisco
+login
+exit

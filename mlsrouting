@@ -1,0 +1,6 @@
+///tells the port to act like a router instead of a switch
+int g1/0/6
+switchport mode acces
+switchport access vlan 10
+D1(config)# ip routing (enables the traffic)
+no switchport 

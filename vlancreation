@@ -1,0 +1,13 @@
+///Script for creating VLANs on a Cisco Switch 
+vlan 5
+name example1
+vlan 10
+name example2
+vlan 15
+name example3
+vlan 20
+name example4
+vlan 88
+name blackhole
+vlan 99
+name native

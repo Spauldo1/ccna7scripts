@@ -13,3 +13,13 @@ line vty 0 15
 password cisco
 login
 exit
+ip default-gateway 172.30.50.129
+
+///giving vlan 1 an ip and turning it on
+int vlan 1 
+ip add 172.30.50.142 255.255.255.240
+ipv6 add 2001:db8:face:20ff::2/64
+ipv6 add fe80::B link-local
+desc vlan 1 for S3
+no shut
+exit

@@ -11,3 +11,15 @@ vlan 88
 name blackhole
 vlan 99
 name native
+
+///Moving ports to a specific vlan and setting it to be a data switchport 
+int f0/10
+switchport mode access 
+switchport access vlan 5
+
+///Making  a trunking vlan 
+int range f0/1
+switchport mode trunk 
+switchport trunk allowed vlan 5,10,15,20,99
+switchport trunk native vlan 99
+nonegotiate

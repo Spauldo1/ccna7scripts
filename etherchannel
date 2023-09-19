@@ -1,0 +1,7 @@
+int range f0/1-2
+channel-group 1 mode on 
+exit 
+int port-channel 1 
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 1,2,20

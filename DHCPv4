@@ -1,0 +1,21 @@
+///DHCP config commands3
+ip dhcp excluded-address 192.168.1.1 192.168.10.9
+ip dhcp excluded-address 192.168.10.254
+ip dhcp pool LAN-POOL-1
+network 192.168.10.0 255.255.255.255.0 
+default-router 192.168.10.1
+dns-server 192.168.11.5
+domain-name example.com
+end 
+lease
+
+/// verification commands
+show running-config | section dhcp
+show ip dhcp binding
+show ip dhcp server statistics 
+
+/// Forwarding broadcast requests 
+int g0/0/0
+  ip helper-address 192.168.11.6
+  end 
+  show ip int g0/0/0

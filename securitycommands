@@ -1,0 +1,21 @@
+///Port Security
+int f0/1
+switchport port-security aging time 60
+switchport port-security aging type inactivity
+switchport port-security maximum 3
+switchport port-security violation restrict
+switchport port-security maximum sticky 
+end
+
+///DHCP
+ip dhcp snooping vlan 10
+ip dhcp snooping trust (for a trusted port)
+ip dhcp snooping limit rate 5
+
+
+///Portfast and BPDU
+int f0/1
+spanning-tree portfast
+
+
+show port-security interace 

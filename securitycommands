@@ -2,12 +2,11 @@
 int f0/1
 switchport mode access 
 switchport port-security 
-
+switchport port-security maximum 3
+switchport port-security maximum sticky 
 switchport port-security aging time 60
 switchport port-security aging type inactivity
-switchport port-security maximum 3
 switchport port-security violation restrict
-switchport port-security maximum sticky 
 end
 
 ///DHCP
@@ -22,3 +21,4 @@ spanning-tree portfast
 
 
 show port-security interace 
+nonegotiate

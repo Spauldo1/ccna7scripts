@@ -1,5 +1,8 @@
 ///Port Security
 int f0/1
+switchport mode access 
+switchport port-security 
+
 switchport port-security aging time 60
 switchport port-security aging type inactivity
 switchport port-security maximum 3

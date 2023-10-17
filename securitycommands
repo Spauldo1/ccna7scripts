@@ -11,13 +11,17 @@ end
 
 ///DHCP
 ip dhcp snooping vlan 10
+ip arp inspection vlan 10
+int f0/1
 ip dhcp snooping trust (for a trusted port)
 ip dhcp snooping limit rate 5
 
 
 ///Portfast and BPDU
 int f0/1
+switchport mode access
 spanning-tree portfast
+spanning-tree bpduguard enable
 
 
 show port-security interace 

@@ -174,3 +174,10 @@ login local
 transport input ssh 
 exit
 ```
+### IP ROUTING
+Default routes
+ipv6 route ::/0 g0/1
+ip route 0.0.0.0 0.0.0.0 g0/1
+
+Recursive is nexthop IP
+Direct is the interface
